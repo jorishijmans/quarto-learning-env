@@ -1,0 +1,55 @@
+---
+title: Test inline code
+author: Joris Hijmans
+---
+
+## OJS
+
+-   OJS syntax does not allow `-` in function.
+
+
+
+| **Input**   | **Output** |
+|-------------|------------|
+| `text`      | ✅          |
+| `text-text` | N          |
+| `textText`  | ✅          |
+
+
+::: {.panel-tabset group="language"}
+## OJS
+
+#### text ✅
+
+```{ojs}
+text = md`print text`
+```
+
+`{ojs} text`
+
+output: `{ojs} text`
+
+#### text-text (n)
+
+```{ojs}
+text-text = md`print text`
+```
+
+`{ojs} text-text`
+
+#### textText ✅
+
+```{ojs}
+textText = md`print text`
+```
+
+`{ojs} textText`
+
+## R
+
+not tested
+:::
+
+
+
+
