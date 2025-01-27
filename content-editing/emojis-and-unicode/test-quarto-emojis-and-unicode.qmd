@@ -1,0 +1,57 @@
+---
+title: Test Quarto Emojis and Unicode symbols
+author: Joris Hijmans
+from: markdown+emoji
+format: html
+---
+
+With `from: markdown+emoji` in the document yaml, `:grinning:` works :grinning: 
+
+````yaml
+---
+title: Test Quarto Emojis and Unicode symbols
+author: Joris Hijmans
+from: markdown+emoji
+---
+````
+
+
+
+
+## Emojis in HTML
+
+### [Iconify Extension for Quarto](https://github.com/mcanouil/quarto-iconify) 
+
+> "Use Iconify icons in HTML-based Quarto documents (over 200,000 open source vector icons)."
+see https://github.com/mcanouil/quarto-iconify
+
+
+more options than Markdown Emoji Extension below.
+
+
+
+#### Markdown Emoji extension to add Emojis without going into Visual Editor (VS Code)
+Markdown Emoji extension [`bierner.markdown-emoji`](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-emoji) does not work by default. 
+
+- Enable Emoji autocomplete in quarto `.qmd` files.
+
+
+```json
+{
+    "emojisense.languages": {
+
+        "markdown": true,
+        "quarto": true,
+        "plaintext": {
+            "markupCompletionsEnabled": false,
+            "emojiDecoratorsEnabled": false
+        },
+        "scminput": false,
+        "git-commit": false
+    }
+}
+```
+
+## PDF
+
+Tried rendering emojis in pdf, didn't work. Not needed now. 
